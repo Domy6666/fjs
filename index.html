@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link style="border-radius: 50px;" rel="shortcut icon" href="images/roundedLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="pages/style.css">
+    <script src="pages/script.js"></script>
+    <title>Home Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+*{
+    margin: 0;
+}
+
+header{
+    height: 150px;
+}
+
+#bgrVideo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.pageListButtons {
+    width: 450px;
+}
+.pageButtons {
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 195px;
+    --b: 1px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: #373B44;
+     padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+        var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 1s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 18px;
+    border: 1px solid;
+    border-radius: 3px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 10px;
+}
+  
+.pageButtons:hover, pageButtons:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+  
+.pageButtons:active {
+    background: var(--color);
+    color: #fff;
+}
+  
+    </style>
+</head>
+<body>
+    <header>
+        <div id="bgrVideo">
+            <video  src="videos/rain.mp4" autoplay muted loop preload="auto"></video>
+        </div>
+    </header>
+    
+    <div class="pageListButtons">
+        <a href="pages/broke_a_head.html">
+            <button class="pageButtons">Bancomat</button>
+        </a>
+        <a href="pages/topic2.html">
+            <button class="pageButtons">School marks</button>
+        </a>
+        <a href="pages/topic2.html">
+            <button class="pageButtons">School marks</button>
+        </a>
+        <a href="pages/topic2.html">
+            <button class="pageButtons">School marks</button>
+        </a>
+        <a href="pages/topic2.html">
+            <button class="pageButtons">School marks</button>
+        </a>
+        <a href="pages/topic2.html">
+            <button class="pageButtons">School marks</button>
+        </a>
+        <a href="pages/topic2.html">
+            <button class="pageButtons">School marks</button>
+        </a>
+        <a href="pages/topic2.html">
+            <button class="pageButtons">School marks</button>
+        </a>
+        <a href="pages/topic2.html">
+            <button class="pageButtons">School marks</button>
+        </a>
+        <a href="pages/topic2.html">
+            <button class="pageButtons">School marks</button>
+        </a>
+        <a href="pages/topic1.html">
+            <button>f</button>
+        </a>
+    </div>
+    <div></div>
+</body>
+</html>
