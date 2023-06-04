@@ -14,7 +14,9 @@
 *{
     margin: 0;
 }
-
+body {
+    background-color: #032649 ;
+}
 header{
     height: 150px;
 }
@@ -138,8 +140,12 @@ video {
 }
     </style>
 </head>
-<body id="bodyBancomat">
-
+<body>
+    <header>
+        <a href="/fjs/">
+            <button style="background-color: #ff0000; color: #fff; margin: 0; float: right;" class="pageButtons">Home Page</button>
+        </a>
+    </header>
 
        <center> 
         <div id="bancomat" >
@@ -178,8 +184,6 @@ let answer=document.getElementById("answer");
 answer.innerHTML = string
 }
 </script>
-    <a href="/fjs/">
-        <button style="background-color: #ff0000; color: #fff;" class="pageButtons">Home Page</button>
-    </a>
+   
 </body>
 </html>
