@@ -8,8 +8,123 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="/js/script.js"></script>
     <title>School marks</title>
+    <style>
+        body {
+            background-color: #032649 ;
+        }
+        #block {
+    background-color: #9921e8;
+    background-image: linear-gradient(315deg, #9f21f3 13%, #5f72be 74%);
+        border-radius: 20px;
+        padding: 30px 60px;
+        width: 450px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 30px 60px;
+        width: 450px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        margin-top: 100px;
+        font-size: 30px;
+        margin-top: 100px;
+        font-size: 25px;
+        }
+#field {
+    font-size: 25px;
+    height: 30px;
+    width: 250px;
+    border: none;
+    border-radius: 10px; 
+}
+.btn {
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 300px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px; 
+    margin-top: 10px;
+}
+.btn:hover {
+    transition: 1s;
+    background-color: black;
+    color: white;
+}
+.resetBtn {
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 350px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px; 
+    margin-top: 10px;
+}
+.resetBtn:hover {
+    transition: 1s;
+    background-color: red;
+    color: white;
+}
+#requestBtn{
+   margin-right: 10px;
+   text-decoration: none;
+   font-family: 'Roboto Condensed', sans-serif;
+   width: 350px;
+   font-size: 20px;
+   border: none;
+   border-radius: 3.5px;
+   margin-top: 10px;
+}
+#requestBtn:hover {
+    text-decoration: blink;
+}
+#resetBtn {
+    margin-left: 10px;
+}
+  
+    </style>
 </head>
 <body>
-    <form name="marksForm" action="document.marksform."></form>
+    <center>
+    <div id="block">
+        <h1>Enter you mark</h1>
+        <form name="averageMark" action="javascript:marks()">
+        <input class="grade" id="field" name="a" type="number" value="" size="4"><br>
+        <input class="btn" type="submit" size="4" value="Find out how stupid you are">
+        <input class="resetBtn" type="reset"  name="reset" value="Reset">
+        </form>
+        <span id="level">Your stupidity level is:</span><br/>
+    </div>
+</center>
+    <script>
+     function marks(){
+        let mark = +document.averageMark.a.value;
+        let answer=document.getElementById("level")
+switch(mark){
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+        string="You are stupid";
+        break;
+    case 5:
+    case 6:
+        string="I don`t know may be average...";
+        break;
+    case 7:
+    case 8:
+    case 9:
+        string='Not bad, not bad';
+        break;
+    case 10:
+    case 11:
+    case 12:
+        string="GO OUT!!!!!!!";
+        break;
+default:
+    string="I don`t understand"
+}
+answer.innerHTML = string;
+}
+</script>
+<a href="/">
+    <button style="background-color: #ff0000; color: #fff;" class="pageButtons">Home Page</button>
+</a>
 </body>
 </html>
