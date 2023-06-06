@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+
+        
+body {
+            background-color: #032649 ;
+        }
+        .content {
+    background-image: linear-gradient(315deg, #9f21f3 13%, #5f72be 74%);
+            border-radius: 20px;
+            padding: 30px 60px;
+            height: 290px;
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px 60px;
+            width: 450px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        margin-top: 100px;
+        font-size: 30px;
+        margin-top: 100px;
+        font-size: 25px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+		.field {
+            border: 0;
+            text-align: center;
+            border-radius: 10px;
+            height: 20px;
+            width: 80px;
+        }
+        .formAction {
+            border: 0;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 20px;
+            height: 30px;
+            width: 190px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            color: red;
+        }
+        .result {
+            float: left;
+            margin-top: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .pageButtons {
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 195px;
+    --b: 1px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: #373B44;
+     padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+        var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 1s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 18px;
+    border: 1px solid;
+    border-radius: 3px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 10px;
+}
+  
+.pageButtons:hover, pageButtons:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+  
+.pageButtons:active {
+    background: var(--color);
+    color: #fff;
+}
+	</style>
+</head>
+<body>
+    <header>
+        <a href="/fjs/">
+            <button style="background-color: #ff0000; color: #fff; margin: 0; " class="pageButtons">Home Page
+            </button>
+        </a>
+    </header>
+	<center>
+	<div class="content">
+<p>Розв'язок квадратного рівняння a&middot;x&sup2; + b&middot;x + c = 0.</p>
+<form name="qef" action="javascript:quadratic_equation()">
+a <input class="cqe field"  name="a" type="number" value="" size="4">
+b <input class="cqe field"  name="b" type="number" value="" size="4">
+c <input class="cqe field"  name="c" type="number" value="" size="4">
+<br>
+<input class="btn formAction" type="submit" value="Розрахувати">
+<input class="btn formAction" type="reset" name="reset" value="Reset">
+</form>
+Рішення: <span  id="square_sol">Введить коефіцієнти та натисніть "Розрахувати"</span>
+</div>
+</center>
+<script>
+	
+function quadratic_equation() {
+  let a = document.qef.a.value;
+  let b = document.qef.b.value;
+  let c = document.qef.c.value;
+  let sol = document.getElementById("square_sol");
+
+	let D, x1, x2; // змінні
+	D = b**2 - 4*a*c; // загальна формула дискрімінанту
+	x1 = ( -b + Math.sqrt(D) ) / (2*a); // перший корінь квадратного рівняння
+	x2 = ( -b - Math.sqrt(D) ) / (2*a); // другий корінь квадратного рівняння
+	if ( D > 0 ) {
+		
+		string="x1 = " + x1 + " x2 = " + x2 // вивід значення
+
+  }
+	else if ( D == 0 ) {
+		string= "x = " + x1 ; // вивід значення
+	} // else if D == 0
+	else {
+		string= "квадратне рівняння коренів не має!" ;
+	} // else (D < 0)
+
+
+  sol.innerHTML = string;
+}
+
+</script>
+</body>
+</html>
