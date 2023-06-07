@@ -4,124 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random number</title>
-    <style>
-
-        
-        body {
-                    background-color: #032649 ;
-                }
-                .content {
-            background-image: linear-gradient(315deg, #9f21f3 13%, #5f72be 74%);
-                    border-radius: 20px;
-                    padding: 30px 60px;
-                    height: 290px;
-                    background-color: white;
-                    border-radius: 20px;
-                    padding: 30px 60px;
-                    width: 450px;
-                    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-                margin-top: 100px;
-                font-size: 30px;
-                margin-top: 100px;
-                font-size: 25px;
-                font-family: 'Courier New', Courier, monospace;
-            }
-                .field {
-                    border: 0;
-                    text-align: center;
-                    border-radius: 10px;
-                    height: 20px;
-                    width: 100px;
-                }
-                .formAction {
-                    border: 0;
-                    text-align: center;
-                    border-radius: 10px;
-                    margin-top: 20px;
-                    height: 30px;
-                    width: 190px;
-                    font-family: 'Courier New', Courier, monospace;
-                    font-size: 20px;
-                    color: red;
-                }
-                .result {
-                    float: left;
-                    margin-top: 20px;
-                    font-family: 'Courier New', Courier, monospace;
-                }
-                .pageButtons {
-            font-family: 'Roboto Condensed', sans-serif;
-            width: 195px;
-            --b: 1px;   /* border thickness */
-            --s: .45em; /* size of the corner */
-            --color: #373B44;
-             padding: calc(.5em + var(--s)) calc(.9em + var(--s));
-            color: var(--color);
-            --_p: var(--s);
-            background:
-                conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
-                var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-            transition: .3s linear, color 1s, background-color 0s;
-            outline: var(--b) solid #0000;
-            outline-offset: .6em;
-            font-size: 18px;
-            border: 1px solid;
-            border-radius: 3px;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-            margin: 10px;
-        }
-          
-        .pageButtons:hover, pageButtons:focus-visible{
-            --_p: 0px;
-            outline-color: var(--color);
-            outline-offset: .05em;
-        }
-          
-        .pageButtons:active {
-            background: var(--color);
-            color: #fff;
-        }
-            </style>
+    <title>Number guessing</title>
 </head>
 <body>
     
-    <header>
-        <a href="/fjs/">
-            <button style="background-color: #ff0000; color: #fff; margin: 0; " class="pageButtons">Home Page
-            </button>
-        </a>
-    </header>
-    <center>
-    <div class="content">
-        <p>Random numbers id range of</p>
-        <form name="FormRandom" action="javascript:random()">
-            <input class="field" name="min" type="number" value="10">
-            <input class="field" name="max" type="number" value="40">
-            <br>
-            <input  type="submit" value="GO! GO! GO!">
-        </form>
-        <span  id="out">--</span>
-    </div>
-</center>
-    <script>
-        
-        function random () {        
-let     min     = document.FormRandom.min.value;
-let     max     = document.FormRandom.max.value;
-let     out     = document.getElementById("out")
-let     number; 
+    <script> 
 
-for(i=0;i<100;i++) {
-            number = Math.random()*max
-            // document.writeln(Math.round(number) + "<br>");
-        output = (Math.round(number));
-}
-out.innerHTML = output;
-}
+alert("Enter a range of numbers to guess \n \n The bigger the difference, the harder it will be to guess")
+
+let min=+prompt("enter the minimum number","1")
+let max=+prompt("Enter the maximum number","3")
+let numX=Math.round(min+Math.random()*(max-min));
+let num;
+let count=0;
+do{
+   
+    num=prompt("Enter your prediction");
+    count++
+    if(num==null){
+        document.write("<div><p>Bye!</p></div>")
+    }else if(count>8){
+        document.write("<div><p>Your limit has expired. Bye</p></div>")
+    }else if(+num>numX){
+        alert(`Attempt №${count}. Your number is more than necessary`)
+    }else if(+num<numX){
+       alert(`Attempt №${count}. Your number is less than required`)
+    }else if(+num==numX){
+        document.write(" <div><p> You guessed it! Guessed number: "+numX+ ". Number of samples: "+ count+"</p></div>")    
+    }else{
+        alert("That is not a number")
+    }
+}while (num!=numX && num!=null && count<=8);
 
     </script>
+
 </body>
 </html>
