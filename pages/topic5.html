@@ -1,42 +1,77 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number guessing</title>
+    <title>Game with numbers</title>
 </head>
+<style>
+
+body {
+    background-color: #032649 ;
+}
+.content {
+background-image: linear-gradient(315deg, #9f21f3 13%, #5f72be 74%);
+    border-radius: 20px;
+    padding: 30px 60px;
+    height: 290px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 60px;
+    width: 450px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+margin-top: 100px;
+font-size: 30px;
+margin-top: 100px;
+font-size: 25px;
+font-family: 'Courier New', Courier, monospace;
+}
+div{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        width: 50%;
+        background-color:rgb(188 201 220 / 96%);
+        font-size: 25px;
+        color: #212020;
+        border-radius: 20px;
+        padding: 15px 20px;
+        text-align: center;
+        margin: 10px auto;
+        margin-top: 15%;
+}
+#res {
+    background-color: red;
+}
+</style>
 <body>
     
-    <script> 
-
-alert("Enter a range of numbers to guess \n \n The bigger the difference, the harder it will be to guess")
-
-let min=+prompt("enter the minimum number","1")
-let max=+prompt("Enter the maximum number","3")
+    <script>
+     
+let min=+prompt("Введіть мінімальне число","1")
+let max=+prompt("Введіть максимальне число","3")
 let numX=Math.round(min+Math.random()*(max-min));
 let num;
 let count=0;
 do{
    
-    num=prompt("Enter your prediction");
+    num=prompt("Введіть число",0);
     count++
     if(num==null){
-        document.write("<div><p>Bye!</p></div>")
+        document.write("<div><p>До побачення!</p></div>")
     }else if(count>8){
-        document.write("<div><p>Your limit has expired. Bye</p></div>")
+        document.write("<div><p>Ви використали свій ліміт спроб. На жаль Ви не вгадали. До побачення!</p></div>")
     }else if(+num>numX){
-        alert(`Attempt №${count}. Your number is more than necessary`)
+        alert(`Спроба №${count}. Ваше число більше, ніж те, що потрібно`)
     }else if(+num<numX){
-       alert(`Attempt №${count}. Your number is less than required`)
+       alert(`Спроба №${count}. Ваше число менше, ніж те, що потрібно`)
     }else if(+num==numX){
-        document.write(" <div><p> You guessed it! Guessed number: "+numX+ ". Number of samples: "+ count+"</p></div>")    
+        document.write(" <div style='background-image: linear-gradient(315deg, #9f21f3 13%, #5f72be 74%);'> " + "<p> Ви вгадали! Загадане число: "+numX+ ". Кількість спроб: "+ count+"</p>"+"</div>")    
     }else{
-        alert("That is not a number")
+        alert("Ви ввели не число")
     }
 }while (num!=numX && num!=null && count<=8);
 
     </script>
-
 </body>
 </html>
