@@ -104,13 +104,10 @@ font-family: 'Courier New', Courier, monospace;
 </center>
     <span id="out"></span>
     <script>
+function rectangle() {
         let out = document.getElementById("out")
         let side_AB = document.data.side_AB.value;
         let side_BC = document.data.side_BC.value;
-
-
-
-        function rectangle() {
             let P = +side_AB*2 + side_BC*2;
             let A = +side_AB * side_BC;
         
