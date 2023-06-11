@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degre</title>
+    <style>        
+        .pageButtons {
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 195px;
+    --b: 1px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: #373B44;
+     padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+        var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 1s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 18px;
+    border: 1px solid;
+    border-radius: 3px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 10px;
+}
+  
+.pageButtons:hover, pageButtons:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+  
+.pageButtons:active {
+    background: var(--color);
+    color: #fff;
+}
+body {
+    background-color: #032649 ;
+}
+.content {
+background-image: linear-gradient(315deg, #9f21f3 13%, #5f72be 74%);
+    border-radius: 20px;
+    padding: 30px 60px;
+    height: 290px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 60px;
+    width: 450px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+margin-top: 100px;
+font-size: 30px;
+margin-top: 100px;
+font-size: 25px;
+font-family: 'Courier New', Courier, monospace;
+}
+
+.field {
+            padding-left: 15px;
+            border: 0;
+            text-align: center;
+            border-radius: 10px;
+            height: 20px;
+            width: 80px;
+        }
+        .formAction {
+            border: 0;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 20px;
+            height: 30px;
+            width: 190px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/fjs/">
+            <button style="background-color: #ff0000; color: #fff; margin: 0; " class="pageButtons">Home Page
+            </button>
+        </a>
+    </header>
+    <center>
+    <div class="content">
+        <form name="data" action="javascript:degre()">
+        <input class="field" type="number" name="degre" value="3"> in
+        <input class="field" type="number" name="number" value="2"> Degre
+            <br>
+        <input class="formAction" type="submit">
+        <input class="formAction" type="reset">
+        </form>
+        <span id="out"></span>
+    </div>
+</center>
+        <script>
+            function degre() {
+                var number = document.data.number.value;
+                var degre = document.data.degre.value;
+                var out = document.getElementById("out");
+                out.innerHTML = Math.pow(degre,number);
+                }
+        </script>
+        
+</body>
+</html>
