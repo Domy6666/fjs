@@ -1,2 +1,2 @@
 # fjs
-dino have been stoled from https://thecodepost.org/apps/trex/index.html
+dino has been stoled from https://thecodepost.org/apps/trex/index.html
