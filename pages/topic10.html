@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+    <title>Document</title>
+    <style>
+        #show-password-btn {
+            background-color: black;
+            color: #fff;
+        }
+        .card {
+background-image: linear-gradient(315deg, #9f21f3 13%, #5f72be 74%);
+        }
+        .animate-password {
+    background-image: linear-gradient(90deg, #ffbb00 50%, transparent 50%);
+    background-size: 200%;
+    
+    background-position-x: 100%;
+    transition: all ease 1s;
+    animation-name: ttt;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes ttt {
+    0% {
+        background-position-x: 100%;    }
+    100% {
+
+        background-position-x: 0;    }
+}
+    </style>
+</head>
+<body>
+    <div class="content mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-sm-12">
+                <form class="card p-4 shadow-sm">
+                    <div class="mb-3">
+                      <label for="login" class="form-label">Login</label>
+                      <input type="text" class="form-control" id="login" value="Domy">
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Password</label>
+                      <div class="input-group flex-nowrap">
+
+                        <input type="password" class="form-control" id="password" value="1234">
+                        <button class="btn btn-outline-secondary" type="button" id="show-password-btn">Show</button>
+
+                      </div>
+                        
+                    </div>
+                    <button type="submit" class="btn  btn-primary" onclick="login()">Login</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script>
+     const showPasswordButton = document.querySelector('#show-password-btn');
+     const passwordInput = document.querySelector('#password');
+    
+     const TIME_SHOW_PASSWORD = 5000;
+     if (showPasswordButton && passwordInput) showPasswordButton.addEventListener('click', showPassword);
+    
+     function showPassword() {
+         if (passwordInput.classList.contains('animate-password')) return;
+         console.log('work');
+         passwordInput.setAttribute('type', 'text');
+         passwordInput.classList.add('animate-password');
+         let interval = setInterval(function()  {
+             passwordInput.setAttribute('type', 'password');
+             passwordInput.classList.remove('animate-password');
+             // showPasswordButton.addEventListener('click', showPassword);
+             clearInterval(interval);
+    
+         }, TIME_SHOW_PASSWORD);
+}
+        function login() {
+        
+        let login = document.getElementById("login");
+        let password = document.getElementById("password");
+        if (login == "domy" || password == "1234") {
+            window.open("domy6666.github.io/fjs/");
+        } else {
+            alert("WRONG login or password")
+        }
+        } 
+     
+    </script>
+</body>
+</html>

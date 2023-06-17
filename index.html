@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link style="border-radius: 50px;" rel="shortcut icon" href="images/roundedLogo.png" type="image/x-icon">
-    <link rel="stylesheet" href="pages/style.css">
+    <link rel="stylesheet" href="index.css">
     <script src="pages/script.js"></script>
     <title>Home Page</title>
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
 *{
     margin: 0;
 }
-
+body {
+}
 header{
     height: 150px;
 }
@@ -57,7 +60,7 @@ height: 48px;
 justify-content: center;
 letter-spacing: -.8px;
 line-height: 24px;
-min-width: 220px;
+min-width: 290px;
 outline: 0;
 padding: 0 17px;
 margin: 1px;
@@ -91,6 +94,24 @@ touch-action: manipulation;
     min-width: 170px;
   }
 }
+.pageListButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.works {
+    padding-top:20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.other_two_link {
+    justify-content: space-around;
+}
+.surprise {
+    justify-content: center;
+}
   
     </style>
 </head>
@@ -100,40 +121,80 @@ touch-action: manipulation;
             <video  src="videos/rain.mp4" autoplay muted loop preload="auto"></video>
         </div>
     </header>
-    
+<div class="works">
     <div class="pageListButtons">
         <a href="pages/broke_a_head.html">
-            <button class="pageButtons">1.Bancomat</button>
+            <button class="custom-btn worksList">
+                <span>Surprise</span><span>Bancomat</span>
+            </button>
         </a>
         <a href="pages/topic2.html">
-            <button class="pageButtons">2.School marks</button>
+            <button class="custom-btn worksList">
+                <span>Surprise</span><span>Marks</span>
+            </button>
         </a>
         <a href="pages/topic3.html">
-            <button class="pageButtons">3.Triangle</button>
+            <button class="custom-btn worksList">
+                <span>Surprise</span><span>Triangle</span>
+            </button>
         </a>
         <a href="pages/topic4.html">
-            <button class="pageButtons">4.Quadratic equation</button>
+            <button class="custom-btn worksList">
+                <span>Surprise</span><span>Quadratic equation</span>
+            </button>
         </a>
         <a href="pages/topic5.html">
-            <button class="pageButtons">5.Guess the number</button>
+            <button class="custom-btn worksList">
+                <span>Surprise</span><span>Guess the number</span>
+            </button>
         </a>
         <a href="pages/topic6.html">
-            <button class="pageButtons">6.Rectangle</button>
+            <button class="custom-btn worksList">
+                <span>Surprise</span><span>Rectangle</span>
+            </button>
         </a>
         <a href="pages/topic7.html">
-            <button class="pageButtons">7.Degre</button>
+            <button class="custom-btn worksList">
+                <span>Surprise</span><span>Degre</span>
+            </button>
         </a>
-        <a href="pages/topic2.html">
-            <button class="pageButtons">8.School marks</button>
+        <a href="pages/topic8.html">
+            <button class="custom-btn worksList">
+                <span>Surprise</span><span>Factorial</span>
+            </button>
         </a>
-        <a href="pages/topic2.html">
-            <button class="pageButtons">9.School marks</button>
+        <a href="pages/topic9.html">
+        <button class="custom-btn worksList">
+            <span>Surprise</span><span>Compliments</span>
+            </button>
         </a>
-        < h
+        <a href="pages/topic10.html">
+            <button class="custom-btn worksList">
+                <span>Surprise</span><span>Login</span>
+            </button>
+        </a>
+        <a href="pages/topic11.html">
+            <button class="custom-btn worksList">
+                <span>Surprise</span><span>Gigits in number</span>
+            </button>
+        </a>
+        <a href="pages/topic12.html">
+            <button class="custom-btn worksList">
+                <span>Surprise</span><span>Spam check</span>
+            </button>
+        </a>
+    
+    <a href="dino/index.html">
+        <button class="custom-btn worksList surprise">
+            <span>DINO</span><span>Surprise</span>
+        </button>
+    </a>
+</div>
+</div>
 </body>
 </html>
-
-
+<!-- 
+<br>
 1.Bancomat +
 <br>
 2.Marks +
@@ -148,10 +209,10 @@ touch-action: manipulation;
 <br>
 7.Degre +
 <br>
-8.Factorial -
+8.Factorial +
 <br>
-9.Compliments -
+9.Compliments +
 <br>
-10.Login -
+10.Login +
 <br>
-11.Number random +
+11.Gigits in number + -->

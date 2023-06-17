@@ -10,15 +10,9 @@
 <meta property="og:site_name" content="The Code Post">
 <meta property="og:description" content="Google Chrome has a hidden T-Rex game only for offline mode. But now, you can enjoy it any time and on any device, but you gotta stay online!!!">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@thecodepost">
-<meta name="twitter:creator" content="@thecodepost">
-<meta name="twitter:title" content="Check out the cool hidden game from Google Chrome!">
-<meta name="twitter:description" content="Check out the cool hidden game from Google Chrome!">
-<meta name="twitter:image:src" content="http://img.thecodepost.org/2015/01/trex.png">
+
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-	<!--script type="text/javascript" src="a.js"></script-->
 	<script type="text/javascript">
 	function hideClass(name) {
        var myClasses = document.querySelectorAll(name),
@@ -1937,9 +1931,7 @@
 	</script>
 
 
-	<style>/* Copyright 2014 The Chromium Authors. All rights reserved.
-   Use of this source code is governed by a BSD-style license that can be
-   found in the LICENSE file. */
+	<style>
 
 a {
   color: #585858;
@@ -2202,11 +2194,8 @@ input[type=checkbox] {
   }
 }
 </style>
-  <style>/* Copyright 2013 The Chromium Authors. All rights reserved.
- * Use of this source code is governed by a BSD-style license that can be
- * found in the LICENSE file. */
+  <style>
 
-/* Don't use the main frame div when the error is in a subframe. */
 html[subframe] #main-frame-error {
   display: none;
 }
@@ -2536,10 +2525,51 @@ html[subframe] body {
     margin-top: 30px;
   }
 }
+.pageButtons {
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 195px;
+    --b: 1px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: #373B44;
+     padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+        var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 1s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 18px;
+    border: 1px solid;
+    border-radius: 3px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 10px;
+}
+  
+.pageButtons:hover, pageButtons:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+  
+.pageButtons:active {
+    background: var(--color);
+    color: #fff;
+}
 </style>
 </head>
 
 <body id="t">
+  
+  <div>
+    <a href="/fjs/">
+        <button style="background-color: #ff0000; color: #fff; margin: 0; " class="pageButtons">Home Page
+        </button>
+    </a>
+</div>
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -2559,7 +2589,7 @@ html[subframe] body {
 </script>
 <div id="main-frame-error" class="interstitial-wrapper" jstcache="0">
     <div class="onlyforchrome" style="font-size: 30px;text-align: center;font-family: Helvetica;">Running T-Rex</div>
-    <div class="onlyforchrome" style="margin-top:5px;text-align:center;color:#8a8a8a;margin-bottom:80px; font-size:.8em;line-height:1.2em;font-family: Georgia;"><a href="http://www.thecodepost.org/internet/play-hidden-t-rex-game-offline-chrome/" target="_blank"><strong>T-Rex Dino game</strong></a> from Google Chrome offline mode ripped by <a href="https://www.twitter.com/thecodepost" target="_blank"><strong>@thecodepost</strong></a>.<br/> Press "Space" to jump your Dino and start the game.</div>
+    <div class="onlyforchrome" style="margin-top:5px;text-align:center;color:#8a8a8a;margin-bottom:80px; font-size:.8em;line-height:1.2em;font-family: Georgia;"><strong style="color: blue;">T-Rex Dino game</strong></a><strong></strong></a>.<br/> Press "Space" to jump your Dino and start the game.</div>
 	<div id="main-frame-notchrome" style="display:none; margin-top:50px;">Sorry, this game only runs on the Google Chrome! You can download it free <a href="https://www.google.com/chrome">here</a></div>
     <div id="offline-resources" jstcache="0">
     <div id="offline-resources-1x" jstcache="0">
@@ -2596,7 +2626,7 @@ html[subframe] body {
   </script>
 
   <div class="onlyforchrome">
-    <div id="socialbutts" class="addthis_toolbox addthis_default_style" style="text-align:center; padding-top:65px;">
+    
       <table border="0" style="margin:0 auto;"><tr>
 			<td><div
 				class="fb-like"
@@ -2605,7 +2635,7 @@ html[subframe] body {
 				data-show-faces="false">
 			</div></td>
 			<td style="padding-left:15px;"><div class="g-plusone" data-size="medium" data-href="http://apps.thecodepost.org/trex/trex.html"></div></td>
-			<td><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://apps.thecodepost.org/trex/trex.html" data-text="Cool Hidden T-Rex game" data-via="thecodepost" data-hashtags="trexgame">Tweet</a>
+			<td>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></td>
 	  </tr></table>
     </div>

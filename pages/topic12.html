@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("React for a keywords (free), (garranty)")
+        let text = prompt(`Enter your massage for publication on site, \n \n React for a keywords: (free), (garranty) \n \n Example: \n \n You win a raffle and you get a free upgrade to your laptop`, "You win a raffle and you get a free upgrade to your laptop"); 
+
+  function spamCheck () {
+      
+        let depersonalization = text.toLowerCase();          
+          return !!(~depersonalization.indexOf("free") || ~depersonalization.indexOf("garranty"))
+}   
+
+    		alert("Message: " + text + "\n" + " \n" +  " Spam check result: "  + spamCheck ()  )
+
+    </script>
+</body>
+</html>
